@@ -1,0 +1,236 @@
+:root {
+  --PRIMARY-white: #ffff;
+  --PRIMARY-backgr-gray: #B5B5B5;
+  --PRIMARY-red: #971313;
+  --PRIMARY-dark-grey: #2E3035;
+  --SECONDARY-green: #ADBDA0;
+  --SECONDARY-blue: #A0AEBD;
+  --SECONDARY-violet: #AAA0BD;
+  --SECONDARY-light-grey: #D9D9D9;
+
+  --PRIMARY-shadow: 4px 4px 3px rgba(0, 0, 0, 0.1);
+  --SECONDARY-shadow: 1px 1px 1px rgba(0, 0, 0, 0.1);
+}
+
+@font-face {
+  font-display: swap;
+  font-family: 'Inter';
+  font-style: normal;
+  font-weight: 400;
+  src: url('../fonts/inter-v18-latin-regular.woff2') format('woff2'),
+    url('../fonts/inter-v18-latin-regular.ttf') format('truetype');
+}
+
+@font-face {
+  font-display: swap;
+  font-family: 'Inter';
+  font-style: normal;
+  font-weight: 600;
+  src: url('../fonts/inter-v18-latin-600.woff2') format('woff2'),
+    url('../fonts/inter-v18-latin-600.ttf') format('truetype');
+}
+
+@font-face {
+  font-display: swap;
+  font-family: 'Inter';
+  font-style: normal;
+  font-weight: 700;
+  src: url('../fonts/inter-v18-latin-700.woff2') format('woff2'),
+    url('../fonts/inter-v18-latin-700.ttf') format('truetype');
+}
+
+@font-face {
+  font-display: swap;
+  font-family: 'Inter';
+  font-style: normal;
+  font-weight: 800;
+  src: url('../fonts/inter-v18-latin-800.woff2') format('woff2'),
+    url('../fonts/inter-v18-latin-800.ttf') format('truetype');
+}
+
+* {
+  box-sizing: border-box;
+  margin: 0;
+  font-family: 'Inter', Helvetica, Arial, sans-serif;
+  color: var(--PRIMARY-white);
+}
+
+body {
+  background-color: var(--PRIMARY-backgr-gray);
+}
+
+ul {
+  list-style: none;
+}
+
+a {
+  text-decoration: none;
+}
+
+h2 {
+  font-size: 48px;
+  font-weight: 700;
+}
+
+.logo {
+  margin: 60px 0;
+  text-align: center;
+}
+
+.choose-game {
+  margin: 0 auto;
+  max-width: 1347px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 48px;
+  padding: 0 46px;
+}
+
+.levels-list {
+  font-size: 32px;
+  font-weight: 600;
+  display: flex;
+  width: 100%;
+  gap: 36px;
+  padding: 0;
+}
+
+
+.icon-bomb {
+  background-image: url(/images/bomb_icon_34x34.svg);
+  width: 34px;
+  height: 34px;
+  background-size: cover;
+}
+
+.icon-grid {
+  background-image: url(/images/grid_icon_34x34.svg);
+  width: 34px;
+  height: 34px;
+  background-size: cover;
+}
+
+
+
+
+
+.level {
+  width: 100%;
+  cursor: pointer;
+  transition: transform 0.3s;
+}
+
+.level:hover {
+  transform: scale(1.01);
+}
+
+h3 {
+  color: var(--PRIMARY-dark-grey);
+}
+
+.level-card {
+  background-color: var(--SECONDARY-light-grey);
+  border-radius: 15px;
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+  padding: 47px 0;
+  gap: 28px;
+}
+
+.beginner,
+.intermediate,
+.expert {
+  width: 280px;
+  height: 280px;
+  border-radius: 15px;
+  padding-left: 24px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  box-shadow: var(--PRIMARY-shadow);
+}
+
+.beginner {
+  background-color: var(--SECONDARY-green);
+}
+
+.intermediate {
+  background-color: var(--SECONDARY-blue);
+}
+
+.expert {
+  background-color: var(--SECONDARY-violet);
+}
+
+.icon-text {
+  display: flex;
+  gap: 10px;
+  align-items: center;
+}
+
+@media screen and (max-width: 1024px) {
+  .levels-list {
+    font-size: 24px;
+    gap: 18px
+  }
+
+  .beginner,
+  .intermediate,
+  .expert {
+    width: 220px;
+    height: 220px;
+    padding-left: 18px;
+  }
+
+  .icon-bomb {
+    width: 26px;
+    height: 26px;
+  }
+
+  .icon-grid {
+    width: 26px;
+    height: 26px;
+  }
+}
+
+.panel {
+  background-color: var(--SECONDARY-light-grey);
+  max-width: 743px;
+  height: 64px;
+  padding: 10px;
+  margin: 0 auto 62px;
+  display: flex;
+  border-radius: 15px;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.display {
+  background-color: var(--PRIMARY-backgr-gray);
+  width: 92px;
+  height: 100%;
+  border-radius: 10px;
+  display: flex;
+  justify-content: flex-end;
+  align-items: center;
+  padding: 0 11px;
+}
+
+.reset {
+  background-color: var(--PRIMARY-white);
+  width: 43px;
+  height: 100%;
+  display: flex;
+  padding: 10px;
+  border-radius: 10px;
+  box-shadow: var(--PRIMARY-shadow);
+}
+
+.time, .bombs {
+  font-size: 32px;
+  font-weight: 600;
+}
