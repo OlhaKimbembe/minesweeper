@@ -104,14 +104,14 @@ h2 {
 
 
 .icon-bomb {
-  background-image: url(/images/bomb_icon_34x34.svg);
+  background-image: url(./images/bomb_icon_34x34.svg);
   width: 34px;
   height: 34px;
   background-size: cover;
 }
 
 .icon-grid {
-  background-image: url(/images/grid_icon_34x34.svg);
+  background-image: url(./images/grid_icon_34x34.svg);
   width: 34px;
   height: 34px;
   background-size: cover;
