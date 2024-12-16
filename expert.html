@@ -10,9 +10,29 @@
       rel="stylesheet"
       href="styles.css"
     />
+    <script
+      src="expert.js"
+      type="module"
+    ></script>
     <title>Expert</title>
   </head>
+
   <body>
+    <div class="module_lose invisible">
+      <div class="lose">
+        <h1>You lose!</h1>
+        <p>Session time: <span class="final_time_lose"></span></p>
+      </div>
+      <div class="overlay"></div>
+    </div>
+    <div class="module_win invisible">
+      <div class="win">
+        <h1>You win!</h1>
+        <p>Session time: <span class="final_time_win"></span></p>
+      </div>
+      <div class="overlay"></div>
+    </div>
+
     <div class="logo">
       <a href="index.html">
         <img
@@ -23,15 +43,34 @@
       </a>
     </div>
     <div class="panel">
-      <div class="display"><span class="time">11</span></div>
-      <div class="reset">
-        <img
-          src="images/reset.svg"
-          alt="reset"
-        />
+      <div class="display">
+        <div class="mm_box">
+          <span class="mm"></span>
+        </div>
+        <span class="colon invisible">.</span>
+        <div class="ms_box">
+          <span class="ms"></span>
+        </div>
+        <span class="time_echo">00:00</span>
       </div>
-      <div class="display"><span class="bombs">10</span></div>
+      <div class="buttons_box">
+        <div class="button reset">
+          <img
+            src="images/reset.svg"
+            alt="reset"
+          />
+        </div>
+        <div class="button pause">
+          <img
+            src="images/pause.svg"
+            alt="pause"
+          />
+        </div>
+      </div>
+      <div class="display"><span class="bombs"></span></div>
     </div>
-    <div class="board"></div>
+    <div class="board-box">
+      <div class="board"></div>
+    </div>
   </body>
 </html>
